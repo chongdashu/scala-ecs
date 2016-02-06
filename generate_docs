@@ -1,0 +1,1 @@
+scaladoc src/com/chongdashu/scala/ecs/*.scala -d docs  -doc-title "Scala Entity Component System" -doc-version "0.1.0"

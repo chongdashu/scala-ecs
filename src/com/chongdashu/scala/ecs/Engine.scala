@@ -11,7 +11,7 @@ class Engine {
     val entities : List[Entity] = List();
     
     /**
-     * A list of [[Scom.chongdashu.scala.ecs.System]] objects.
+     * A list of [[com.chongdashu.scala.ecs.System]] objects.
      */
     val systems : List[System] = List();
     
