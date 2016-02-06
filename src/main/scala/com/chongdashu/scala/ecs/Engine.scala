@@ -2,7 +2,7 @@ package com.chongdashu.scala.ecs
 
 /** The main engine of the ECS framework.
   */
-class Engine {
+class Engine() {
     
     /**
      * A list of `Entity` objects.
@@ -31,11 +31,11 @@ class Engine {
      */
     var isUpdating : Boolean = false;
     
-    def addEntity : Unit = {
+    def addEntity(entity : Entity) : Unit = {
         
     }
     
-    def removeEntity : Unit = {
+    def removeEntity(entity : Entity) : Unit = {
         
     }
     
