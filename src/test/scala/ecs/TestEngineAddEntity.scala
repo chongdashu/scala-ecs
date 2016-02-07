@@ -1,12 +1,9 @@
-package test.scala.com.chongdashu.scala.ecs.tests
+package com.chongdashu.scala.ecs
 
-import org.junit.Test
 import junit.framework.TestCase
 import org.junit.Assert._
-import com.chongdashu.scala.ecs.Engine
-import com.chongdashu.scala.ecs.Entity
 
-class TestEngineAddEntityOne extends TestCase {
+class TestEngineAddEntity extends TestCase {
 
     var engine: Engine = _;
 

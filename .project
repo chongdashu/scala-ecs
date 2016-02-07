@@ -1,5 +1,5 @@
 <projectDescription>
-  <name>scala-ecs</name>
+  <name>Scala ECS</name>
   <buildSpec>
     <buildCommand>
       <name>org.scala-ide.sdt.core.scalabuilder</name>

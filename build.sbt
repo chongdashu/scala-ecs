@@ -1,6 +1,6 @@
-lazy val root = (project in file("src/main/scala/com/chongdashu/scala/ecs/")).
+lazy val root = (project in file("./")).
 settings(
-  name := "Main",
+  name := "Scala ECS",
   version := "0.1.0",
   scalaVersion := "2.11.7"
 )
