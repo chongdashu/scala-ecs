@@ -13,13 +13,13 @@ class TestEngineAddEntity extends TestCase {
 
     def testAddEntityOne {
         engine.addEntity(new Entity());
-        assertEquals(engine.entities.size, 1);
+        assertEquals(1, engine.entities.size);
     }
     
     def testAddEntityTwo {
         engine.addEntity(new Entity());
         engine.addEntity(new Entity());
-        assertEquals(engine.entities.size, 2);
+        assertEquals(2, engine.entities.size);
     }
 
 

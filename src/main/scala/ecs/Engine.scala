@@ -8,12 +8,12 @@ class Engine() {
      * A list of `Entity` objects.
      * @see [[com.chongdashu.scala.ecs.Entity]]
      */
-    val entities : List[Entity] = List();
+    var entities : List[Entity] = List();
     
     /**
      * A list of [[com.chongdashu.scala.ecs.System]] objects.
      */
-    val systems : List[System] = List();
+    var systems : List[System] = List();
     
     /**
      * A map associating a name with a given entity.
@@ -32,7 +32,7 @@ class Engine() {
     var isUpdating : Boolean = false;
     
     def addEntity(entity : Entity) : Unit = {
-        
+       entities = entities :+ entity;
     }
     
     def removeEntity(entity : Entity) : Unit = {
