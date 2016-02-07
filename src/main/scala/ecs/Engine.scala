@@ -1,6 +1,7 @@
 package com.chongdashu.scala.ecs
 
 import scala.collection.mutable.ListBuffer
+import scala.collection.mutable.Map
 
 /** The main engine of the ECS framework.
   */
@@ -33,8 +34,16 @@ class Engine() {
      */
     var isUpdating : Boolean = false;
     
+    /**
+     * Register an entity to be added to this engine.
+     * This function will not add the entity if it is already in the system.
+     */
     def addEntity(entity : Entity) : Unit = {
-       entities = entities :+ entity;
+        if (!entityMap.contains(entity.key)) {
+            entityMap.put(entity.key, entity);
+            entities = entities :+ entity;    
+        }
+        
     }
     
     def removeEntity(entity : Entity) : Unit = {
