@@ -1,5 +1,7 @@
 package com.chongdashu.scala.ecs
 
+import scala.collection.mutable.ListBuffer
+
 /** The main engine of the ECS framework.
   */
 class Engine() {
@@ -8,7 +10,7 @@ class Engine() {
      * A list of `Entity` objects.
      * @see [[com.chongdashu.scala.ecs.Entity]]
      */
-    var entities : List[Entity] = List();
+    var entities : ListBuffer[Entity] = ListBuffer();
     
     /**
      * A list of [[com.chongdashu.scala.ecs.System]] objects.
@@ -36,7 +38,7 @@ class Engine() {
     }
     
     def removeEntity(entity : Entity) : Unit = {
-        
+        entities -= entity;  
     }
     
     
