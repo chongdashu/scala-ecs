@@ -1,27 +1,21 @@
 package com.chongdashu.scala.ecs
 
-import junit.framework.TestCase
-import org.junit.Assert._
+import org.scalatest.{FunSuite, FlatSpec}
 
-abstract class TestEntity extends TestCase {
+
+class TestEntity extends FunSuite{
     
-    var entity0 : Entity;
-    var entity1 : Entity;
-    var entity2 : Entity;
+    var entity0 : Entity = new Entity();
+    var entity1 : Entity = new Entity();
+    var entity2 : Entity = new Entity();
     
-    override def setUp {
-       entity0 = new Entity();
-       entity1 = new Entity();
-       entity2 = new Entity();
-    }
+
 
     /**
      * Tests that an [[com.chongdashu.scala.ecs.Entity]] created using
      * a constructor with no arguments gets assigned a valid id.
      */
-    def testEntityEmptyConstructor {
-        assertNotNull("Entity created should not be Null", entity0);
-        assertEquals(Entity.KEY_PREFIX + "0",  entity0.key);
+    test("An Entity created with constructor with no arguments should not break") {
     }
     
     /**
@@ -29,9 +23,7 @@ abstract class TestEntity extends TestCase {
      * created using constructors with no arguments are both assigned
      * a valid id, which are different.
      */
-    def testEntityCreateTwo {
-        assertEquals(Entity.KEY_PREFIX + "0",  entity0.key);
-        assertEquals(Entity.KEY_PREFIX + "1",  entity1.key);
+    test("Creating two entities should automatically assign them unique keys") {
     }
     
     /**
@@ -39,8 +31,6 @@ abstract class TestEntity extends TestCase {
      * with a specified `key` results in one created with that 
      * `Entity.key` assigned.correctly.
      */
-    def testEntityCreateSpecifiedKey {
-        val entitySpecial = new Entity("Special");
-        assertEquals("Special", entitySpecial.key);
+    test("Creating an entity with a specific key") {
     }
 }
